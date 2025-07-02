@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favIcon/favicon-32x32.png" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FregMeta</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+</head>
+<body>
+    <special-header></special-header>
+    <main>
+        <section class="cartSection">
+            <div class="container">
+                <h1>Your Cart</h1>
+                <form id="cart-layout" onsubmit="return submitCart(event)">
+                    <div class="User-container">
+                        <div class="userCard">
+                            <div class="UserDetails">
+                                <label id="nameLabel">Full name</label>
+                                <input type="text" class="input" name="fullName" id="FullName" maxlength="50" required>
+                            </div>
+                            <div class="UserDetails">
+                                <label id="emailLabel">Email</label>
+                                <input type="email" name="userEmail" class="input" id="UserEmail" maxlength="254"required>          
+                            </div>
+                            <address>
+                                <div class="UserDetails">
+                                    <label id="phoneLabel">Street Address</label>
+                                    <input type="text" name="userAddress" class="input" id="UserAddress" maxlength="100" required>
+                                </div>
+                                <div class="Wrap">
+                                    <div class="UserDetails">
+                                        <label id="cityLabel">City/Town</label>
+                                        <input type="text" name="userCity" class="input" id="UserCity" maxlength="50" required>
+                                    </div>
+                                    <div class="UserDetails">
+                                        <label id="zipLabel">Zip Code</label>
+                                        <input type="text" name="userZip" class="input" id="UserZip" maxlength="4" required>
+                                    </div>
+                                </div>
+                            </address>
+                        </div>
+                        <div class="userCard">
+                            <div class="UserDetails">
+                                <label>Card Number</label>
+                                <input type="text" name="paymentCardNumber" class="inp CardNumber" 
+                                    id="paymentCardNumber" minlength="16" maxlength="19" inputmode="numeric" 
+                                    placeholder="1234 5678 9012 3456" 
+                                    oninput="formatCardNumber(this);">
+                            </div>
+                            <div class="Wrap">
+                                <div class="UserDetails">
+                                    <label for="paymentExp">Expiry Date</label>
+                                    <input type="text" id="paymentExp" name="paymentExp" maxlength="5" placeholder="MM/YY" oninput="formatExpiryDate(this)">
+                                </div>
+                                    <div class="UserDetails">
+                                        <label>CVV</label>
+                                        <input type="number" placeholder="123" inputmode="numeric" pattern=[0-9]+ name="paymentCVV" min=100 maxlength="3" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cartContainer">
+                            <div  class="cartButton">
+                                <h2>Summary:</h2>
+                                <span id="checkOut"><i class="fa-solid fa-bag-shopping"></i><button type="button" onclick="submitCart()">Checkout</button></span>
+                            </div>
+                            <div class="itemsContainer">
+
+                            </div>
+                            
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+    <special-footer></special-footer>
+</body>
+<script src="MainHeaderFooter.js"></script>
+<script src="main.js" defer></script>
+</html>

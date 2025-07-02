@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en" id="index">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favIcon/favicon-32x32.png" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FregMeta</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+</head>
+<body>
+    <special-header></special-header>
+    <main>
+        <section class="hero">
+            <div class="container">
+                <span><img src="favIcon/android-chrome-512x512.png" alt="FregMeta Hero Image"></span>
+            </div>
+        </section>
+        <section class="section_services">
+            <div class="container">
+                <h1 id="OurServices">Our Services</h1>
+                <div class="servicesContainer">
+                    <div class="DivServices">
+                        <h3 class="serviceSubTitle">Power-PCs for Gamers</h3>
+                        <p>We design and sell high-performance prebuilt gaming PCs, crafted with precision and powered by the latest components. Each PC includes a full breakdown of hardware specs and has been tested for smooth performance on today’s most popular games.</p>
+                    </div>
+                    <div class="DivServices">
+                        <h3 class="serviceSubTitle">Game-Ready system</h3>
+                        <p>We take the guesswork out of gaming PC shopping. Along with every prebuilt computer, we have performance benchmarks and compatibility ratings for the top 10 trending games—from Mario to 007 and Minecraft. No need to worrying about settings or frame rates.
+                        </p>
+                    </div>
+                    <div class="DivServices">
+                        <h3 class="serviceSubTitle">Top Games</h3>
+                        <p>We focus on delivering the best gaming experience by showcasing the top 10 most popular titles, complete with system requirements, performance benchmarks, and optimized settings. Each game we feature is carefully tested for compatibility, ensuring you get what you expect.</p>
+                    </div>
+                </div>       
+            </div>
+        </section>
+        <section class="ProductView">
+            <div class="container">
+                <div class="subHeader">
+                    <h1>Built Computer</h1>
+                    <a href="Product.html"><input type="button" value="View All" class="btnViewAll"></a>
+                </div>
+                <dialog id="productDialog">
+                    <form method="dialog">
+                        <div class="dialogHeader">
+                            <h2>Gen 5 speedx</h2>
+                            <button type="button" onclick="closeDialog()">x</button>
+                        </div>
+                        <hr>
+                        <div class="specs">
+                            <ul></ul>
+                        </div>
+                        <hr>
+                        <div class="addProduct">
+                            <button type="submit" class="btnAddToCart">Add to cart</button>
+                        </div>
+                    </form>
+                </dialog>
+                <div class="productContainer">
+                    <form class="pcCard">
+                        <span class="img"><img src="Images/Computers/Defender PC.jpeg" alt="imgProduct"></span>
+                        <input type="text" class="pcName" value="Defender X PC" readonly>
+                        <span class="priceSpan">R<input type="number" class="pcPrice" value="9500.00" readonly></span>
+                        <button type="submit" class="btnAddToCart">View Product</button>
+                    </form>
+                    <form class="pcCard">
+                        <span class="img"><img src="Images/Computers/Custom Standard PC.jpeg" alt="imgProduct"></span>
+                        <input type="text" class="pcName" value="Custom S PC" readonly>
+                        <span class="priceSpan">R<input type="number" class="pcPrice" value="13000.00" readonly></span>
+                        <button type="submit" class="btnAddToCart">View Product</button>
+                    </form>
+                    <form class="pcCard">
+                        <span class="img"><img src="Images/Computers/Cyber PC built.jpeg" alt="imgProduct"></span>
+                        <input type="text" class="pcName" value="Cyber PC Built" readonly>
+                        <span class="priceSpan">R<input type="number" class="pcPrice" value="45224.00" readonly></span>
+                        <button type="submit" class="btnAddToCart">View Product</button>
+                    </form>
+                    <form class="pcCard">
+                        <span class="img"><img src="Images/Computers/Lenovo Legion.jpeg" alt="imgProduct"></span>
+                        <input type="text" class="pcName" value="Lenovo Legion PC" readonly>
+                        <span class="priceSpan">R<input type="number" class="pcPrice" value="33000.00" readonly></span>
+                        <button type="submit" class="btnAddToCart">View Product</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <section class="GameView">
+            <div class="container">
+                <div class="subHeader">
+                    <h1>Top Games</h1>
+                    <a href="Games.html"><input type="button" value="View All" class="btnViewAll"></a>
+                </div>
+                <div class="productContainer">
+                    <form class="gameCard">
+                        <span class="img"><img src="Images/Games/Mario.jpg" alt="imgProduct"></span>
+                        <input type="text" class="gameName" value="Classic Mario" readonly>
+                        <span class="priceSpan">R<input type="number" class="gamePrice" value="900.00" readonly></span>
+                        <button type="submit" class="btnAddToCart">Add to Cart</button>
+                    </form>
+
+                    <form class="gameCard">
+                        <span class="img"><img src="Images/Games/007.jpg" alt="imgProduct"></span>
+                        <input type="text" class="gameName" value="James Bond 007" readonly>
+                        <span class="priceSpan">R<input type="number" class="gamePrice" value="250.00" readonly></span>
+                        <button type="submit" class="btnAddToCart">Add to Cart</button>
+                    </form>
+                    <form class="gameCard">
+                        <span class="img"><img src="Images/Games/Minecraft.png" alt="imgProduct"></span>
+                        <input type="text" class="gameName" value="Minecraft" readonly>
+                        <span class="priceSpan">R<input type="number" class="gamePrice" value="500.00" readonly></span>
+                        <button type="submit" class="btnAddToCart">Add to Cart</button>
+                    </form>
+                    <form class="gameCard">
+                        <span class="img"><img src="Images/Games/GTASA.jpg" alt="imgProduct"></span>
+                        <input type="text" class="gameName" value="GTA San Andreas" readonly>
+                        <span class="priceSpan">R<input type="number" class="gamePrice" value="400.00" readonly></span>
+                        <button type="submit" class="btnAddToCart">Add to Cart</button>
+                    </form>
+                    
+                </div>
+            </div>
+        </section>
+    </main>
+    <special-footer></special-footer>
+</body>
+<script src="MainHeaderFooter.js"></script>
+<script src="main.js"></script> 
+</html>

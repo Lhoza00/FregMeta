@@ -1,0 +1,681 @@
+/*Applied to all*/
+*{
+    margin: 0 ;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+a{
+    color: black;
+    text-decoration: none;
+}
+hr{
+    border: 1px solid black;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100dvh;
+}
+main{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button{
+    margin: 0;
+    display: none;
+}
+input[type="number"]{
+    display: flex;
+}
+input, textarea{ 
+    padding: 0 0.5rem;
+    outline: none;
+    border: 1px solid black;
+}
+p, h1,h2,h3:hover{
+    cursor: default;
+}
+button, i:hover{
+    cursor: pointer;
+}
+:root{
+    --Main: #90EE90;
+    --Primary: #FFFFFF;
+    --Secondary: #f1ede8;
+    --Tertiary: #9370DB;
+}
+header, footer{
+    z-index: 10;
+    background-color: var(--Main);
+}
+.container{
+    max-width: 1536px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    border: 0px solid red;
+    width: 100%;
+} 
+.section_services, .GameView{
+    width: 100%;
+    background-color: var(--Secondary);
+}
+/*Header*/
+header{
+    border-bottom: 2px solid black;
+}
+header .container{
+    position: sticky;
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    justify-content: space-between;
+    align-items: center;
+   
+}
+.logoContainer{
+    display:flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0.5rem;
+}
+.Logo{
+    font-size: 32px;
+    color: black;
+    text-decoration: none;
+    font-weight: 700;
+    display: flex;
+    justify-content: flex-start;
+    gap: 0.5rem;
+}
+.navbar a {
+    position: relative;
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 40px;
+    color: black;
+}
+.navbar a i{
+    font-size: 1.3rem;
+}
+#menu-btn{
+    font-size: 35px;
+    display: none;
+}
+.navbar a::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #fff;
+    transition: .3s;
+}
+.navbar a:hover:before {
+    width: 100%
+}
+.mini-navbar{
+    display: none;
+    list-style: none;
+    background-color: var(--Substitute);
+    margin: 0 1.5rem;
+    z-index: 9995;
+    right: 0%;
+    top: 75%;
+    border-radius: 4px;
+    position: absolute;
+    text-align: right;
+}
+.mini-navbar li{
+    display: block;
+    border-bottom: 1px solid black;
+    padding: 0.3rem 25px;
+}
+.mini-navbar li:first-child{
+    border-top: 1px solid black;
+
+}
+.mini-navbar li a{
+    color: black;
+    font-size: 1.5rem;
+}
+/*Hero*/
+.hero{
+    min-height: 80vh;
+}
+.hero .container{
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.hero .container span{
+    width: 100%;            
+    overflow: hidden;       
+    position: relative;
+    height: 512px; 
+}
+.hero .container span img{
+  position: absolute;
+  left: -200px;          
+  animation: moveImage 6s linear infinite;
+}
+@keyframes moveImage {
+  0% {
+    left: -200px;         
+  }
+  100% {
+    left: 100%;           
+  }
+}
+/*Services Section*/
+.servicesContainer{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+#OurServices{
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 800;
+    padding: 1rem;
+    
+}
+
+.DivServices{
+    border: 2px solid black;;
+    background-color: var(--Tertiary);
+    width: 25%;
+    height: 35vh;
+    margin-bottom: 1rem;
+}
+
+.serviceSubTitle{
+    text-align: center;
+    font-size: 1.5rem;
+    padding: 7px;
+}
+
+.DivServices p{
+    padding: 0 0.5rem;
+    font-size: 1.2rem;
+}
+/*Products&Games View*/
+.subHeader{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+    
+}
+.btnViewAll{
+    display: flex;
+    border: 1px solid black;
+    border-radius: 7px;
+    background-color: white;
+    padding: 0.2rem;
+    text-align: center;
+    width: max-content;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.btnViewAll:hover{
+    background-color: var(--Main);
+    color: white;
+}
+.productContainer{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-rows: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1vw;
+    padding: 0rem;
+}
+#index .productContainer{
+    gap: 5vw;
+}
+.pcCard, .gameCard{
+    border: 1px solid black;
+    border-radius: 7px;
+    padding: 0.5rem;
+    margin: 1rem 0;
+    width: 15vw;
+    background-color: #888;
+    box-shadow: 0.5rem 0.5rem 0.5rem #555;
+}
+.pcCard .img, .gameCard .img{
+    display: flex;
+    max-width: 100%;
+    height: 40vh;  
+    position: relative;
+    margin-bottom: 0.5rem;
+}
+.pcCard span img, .gameCard span img{
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    position: relative;
+    top: 0;
+    left: 0;
+    border: 2px solid black;
+    border-radius: 7px;
+    transition: transform 0.3s ease;
+}
+.pcCard span img:hover, .gameCard span img:hover{
+    transform: scale(1.05);
+}
+.pcName, .gameName{
+    cursor: default;
+    padding: 0 0rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    border: none;
+    background-color: transparent;
+    
+}
+.priceSpan{
+    margin: 0 0.2rem;
+    display: flex;
+    font-size: 1.2rem;
+}
+.pcPrice, .gamePrice, .dialogPrice{
+    padding: 0 0.5rem;
+    cursor: default;
+    font-size: 1.2rem;
+    align-items: center;
+    max-width: max-content;
+    border: none;
+    background-color: transparent;
+}
+.btnAddToCart{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    padding: 0.2rem;
+    text-align: center;
+    width: 100%;
+    font-size: 1.2rem;
+    cursor: pointer;
+    margin: 0.3rem 0;
+    transition: 0.3s;
+}
+.btnAddToCart:hover{
+    background-color: var(--Main);
+    color: white;
+}
+
+/*Cart*/
+#cart-layout{
+    display: flex;
+    border: 0px solid green;
+    justify-content: space-between;
+    gap: 0.5rem;
+}
+.User-container{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin: 0.5rem 0;
+    border: 0px solid purple;
+    width: 40%;
+}
+.userCard{
+    width: 30vw;
+    padding: 0.5rem;
+    background-color: var(--Main);
+    border: 1px solid black;
+    border-radius: 7px;
+    height: max-content;
+}
+
+.UserDetails{
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    border: 0px solid black;
+    margin: 0.2rem;
+}
+.UserDetails input{
+    border-radius: 5px;
+    height: 4vh;
+}
+.Wrap{
+    display: flex;
+}
+.Wrap .UserDetails:first-child{
+    width: 70%;
+}
+.Wrap .UserDetails{
+    width: 30%;
+}
+.cartContainer{
+    border: 1px solid black;
+    background-color: var(--Main);
+    width: 60%;
+    margin: 0.5rem 0;
+    height: min-content;
+    border-radius: 7px;
+}
+.cartButton{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 0.5rem;
+    margin: 0.5rem 0;
+    align-items: center;
+}
+.cartButton span{
+    display: none;
+    gap: 0.2rem;
+    padding: 0.3rem;
+    background-color: aliceblue;
+    border: 1px solid black;
+    border-radius: 7px;
+    align-items: center;
+    font-size: 1.2rem;
+}
+.cartButton span:hover{
+    scale: 1.1;
+}
+.cartButton span button{
+    padding: 0.2rem;
+    border: 0px solid black;
+    border-radius: 5px;
+    background: transparent;
+
+    font-size: 1.2rem;
+}
+.cartContainer .cartDetails{
+    display: flex;
+    justify-content: space-between;
+    padding: 0.2rem 0.5rem;
+    
+}
+.cartContainer #itemCart{
+    display: flex;
+    justify-content: flex-end;
+    gap: 15%;
+    margin: 0.5rem 1rem;
+    align-items: center;
+}
+
+.cartContainer #itemCart .QuantCart{
+    text-align: center;
+    font-size: 1.2rem;
+}
+#btnCrement{
+    display: flex;
+    gap: 0.5rem;
+}
+#btnCrement button{
+    padding: 0.2rem;
+    border: 1px solid black;
+    border-radius: 4px;
+}
+#btnCrement button:hover{
+    scale: 1.1;
+}
+/*Product*/
+dialog{
+    border: 1px solid black;
+    outline: none;
+    border-radius: 7px;
+    padding: 0.5rem;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+dialog .dialogHeader{
+    display: flex;
+    justify-content: space-between;
+    
+    align-items: center;
+}
+dialog .dialogHeader button{
+    border: 0px solid black;
+    background: transparent;
+    font-size: 1.4rem;
+    color: red;
+}
+dialog .dialogHeader button:hover{
+    scale: 1.2;
+}
+.dialogHeader .priceSpan, .dialogHeader .priceSpan input{
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+dialog hr{
+    border: 1px solid black;
+    margin: 0.5rem 0;
+}
+dialog .addProduct{
+    display: flex;
+    justify-content: center;
+}
+dialog .addProduct button{
+    font-size: 1.3rem;
+    padding: 0.3rem;
+    background-color: aliceblue;
+    border: 1px solid black;
+    width: 60%;
+    transition: 0.3s;
+}
+dialog .addProduct button:hover{
+    background-color: var(--Main);
+    color: white;
+}
+/*success*/
+#doneSection{
+    height: 100vh;
+}
+#doneSection .container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.element{
+    padding: 1rem;
+    background-color: #888;
+    border: 1px solid black;
+    font-size: 1.5rem;
+
+    animation-duration: 5s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 1s;
+    animation-name: success;
+}
+@keyframes success{
+    0%{
+        
+    }50%{
+        scale: 2;
+        border-radius: 9px;
+        color: white;
+        background-color: var(--Main);
+    }
+    100%{
+        background-color: var(--Main);
+        border-radius: 0px;
+    }
+}
+/*Footer*/
+footer{
+    min-height: 10vh;
+    border-top: 2px solid black;
+}
+
+footer .container hr{
+    border: 1px solid black;
+}
+
+.topfooter{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.socials{
+    font-size: 1.7rem;
+    padding-top: 7px;
+    
+}
+.socials i{
+    padding: 0 9px;
+}
+.socials a{
+    color: black;
+    text-decoration: none;
+}
+
+.footlinks{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+#T_C{
+    display: flex;
+    justify-content: space-between;
+    width: auto;
+    gap: 1rem;
+}
+
+/*Media Queries*/
+@media (max-width: 1536px) {
+    .container{
+        max-width: 1280px;
+    }
+}
+@media (max-width: 1280px) {
+    .container{
+        max-width: 1024px;
+    }
+    .DivServices{
+        width: auto;
+        height: 48vh;
+    }
+    .pcCard, .gameCard{
+        width: 22vw;
+    }
+}
+@media (max-width: 1024px) {
+    .container{
+        max-width: 768px;
+    }
+    .DivServices{
+        height: 60vh;
+    }
+    #T_C{
+        width: 30vw;
+    }
+
+    .cartContainer #itemCart{
+        gap: 5%;
+    }
+}
+@media (max-width: 768px) {
+    .container{
+        max-width: 648px;
+        padding: 0 0.5rem;
+    }
+    .servicesContainer{
+        flex-direction: column;
+    }
+    .DivServices{
+        padding: 0.5rem 0;
+        width: 90%;
+        height: max-content;
+    }
+    .pcCard, .gameCard{
+        width: 30vw;
+    }
+    .pcName{
+        height: auto;
+        word-wrap: break-word;
+    }
+    .productContainer{
+        border: 2px solid red;
+        grid-template-columns: repeat(auto-fill, 40%);
+        justify-content: space-evenly;
+    }
+    .navbar{
+        display: none;
+    }
+    #menu-btn{
+        display: block;
+        padding-right: 14px;
+    }   
+    #cart-layout{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .User-container, .cartContainer{
+        border: 2px solid green;
+        margin: 0.5rem auto;
+        width: 80%;
+    }
+    .User-container div,.cartContainer{
+        width: 100%;
+    }
+}
+@media (max-width: 648px) {
+    .container{
+        max-width: 475px;
+    }
+    .Logo{
+        padding-right: 0;
+    }
+    #T_C{
+        width: 40vw;
+    }
+    .pcCard, .gameCard{
+        width: 70%;
+        margin: 0.5rem auto;
+    }
+    .productContainer{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+@media (max-width: 475px) {
+    .container{
+        width: 340px;
+    }
+    .socials i{
+        font-size: 25px;
+        padding: 0 1px;
+    } 
+    .footlinks{
+        display: contents;
+    }
+    #T_C{
+        width: 100%;
+    }
+    .User-container{
+        width: 100%;
+    }
+    .cartContainer #itemCart{
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem
+    }
+}
+@media (max-width: 340px) {
+    .container{
+        width:100%;
+    }
+} 
