@@ -22,6 +22,10 @@ main{
     display: flex;
     flex-direction: column;
 }
+img,span{
+    position: relative;
+    z-index: 1;
+}
 input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button{
     margin: 0;
@@ -124,13 +128,14 @@ header .container{
 .mini-navbar{
     display: none;
     list-style: none;
-    background-color: var(--Substitute);
+    background-color: var(--Main);
     margin: 0 1.5rem;
-    z-index: 9995;
-    right: 0%;
-    top: 75%;
+    z-index: 99;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     border-radius: 4px;
-    position: absolute;
     text-align: right;
 }
 .mini-navbar li{
@@ -140,11 +145,10 @@ header .container{
 }
 .mini-navbar li:first-child{
     border-top: 1px solid black;
-
 }
 .mini-navbar li a{
     color: black;
-    font-size: 1.5rem;
+    font-size: 3rem;
 }
 /*Hero*/
 .hero{
@@ -164,6 +168,7 @@ header .container{
 }
 .hero .container span img{
   position: absolute;
+  z-index: 20;
   left: -200px;          
   animation: moveImage 6s linear infinite;
 }
@@ -510,6 +515,85 @@ dialog .addProduct button:hover{
         border-radius: 0px;
     }
 }
+
+/*Contact*/
+.section_contact .container{
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+.cardContact{
+    width: 50%;
+    height: auto;
+    background-color: var(--Main);
+    margin: 30px auto;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 17px;
+    border: 1px solid black;
+}
+
+.contactTitle{
+    font-size: 30px;
+    font-weight: 700;
+    padding: 10px 0;   
+}
+
+.wording{
+    font-size: 20px;
+    padding-top: 30px;
+}
+
+.cardpadding{
+    padding-left: 3rem;
+}
+.cardpadding input,.cardpadding textarea{
+    font-size: 1.5rem;
+    padding: 0 1rem;
+}
+.cardContact button{
+    width: 9rem;
+    height: 2rem;
+    margin: 0.6rem 0;
+    border-radius: 6px;
+    border-width: 1px;
+}
+.contacter{
+    width: 92%;
+    height: 2.7rem;
+    margin-top: 30px;
+    border-radius: 7px;
+    border-width: 1px;
+}
+
+.contactermessage{
+    height: 8rem;
+    width: 92%;    
+    margin-top: 30px;
+    border-radius: 7px;
+    border-width: 1px;
+}
+
+.contactermessage::placeholder{
+    text-align: left;
+    align-self: center;
+    line-height: 8;
+    padding-left: 20px;
+}
+
+.contacter::placeholder{
+    text-align: left;
+    padding-left: 20px;
+}
+
+.cardContact button{
+    width: 9rem;
+    height: 2rem;
+    margin: 0.6rem 0;
+    border-radius: 6px;
+    border-width: 1px;
+}
+
 /*Footer*/
 footer{
     min-height: 10vh;
@@ -569,6 +653,9 @@ footer .container hr{
     .pcCard, .gameCard{
         width: 22vw;
     }
+    .cardContact{
+        width: 60%;
+    }
 }
 @media (max-width: 1024px) {
     .container{
@@ -606,7 +693,6 @@ footer .container hr{
         word-wrap: break-word;
     }
     .productContainer{
-        border: 2px solid red;
         grid-template-columns: repeat(auto-fill, 40%);
         justify-content: space-evenly;
     }
@@ -629,6 +715,12 @@ footer .container hr{
     }
     .User-container div,.cartContainer{
         width: 100%;
+    }
+    .cardContact{
+       width: 90%;
+    }
+    #contact #menu-btn{
+        display: none;
     }
 }
 @media (max-width: 648px) {
@@ -672,6 +764,11 @@ footer .container hr{
         display: flex;
         flex-direction: column;
         gap: 0.5rem
+    }
+    .cardContact{
+        margin-left : 0;
+        margin-right: 0;
+        width: 100%;
     }
 }
 @media (max-width: 340px) {

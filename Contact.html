@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="contact">
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="style.css">
@@ -11,6 +11,23 @@
 <body>
     <special-header></special-header>
     <main>
+        <section class="section_contact">
+            <div class="container">
+                <form class="cardContact">
+                    <div class="cardpadding">
+                        <p class="contactTitle">Submit question</p>
+                    </div>
+                        <hr size="3" color="black"/>
+                    <div class="cardpadding">
+                        <p class="wording">Please fill out the form below to contact us.</p>
+                        <input type="email" placeholder="Enter your e-mail" name="userEmail" class="contacter" required>
+                        <input placeholder="Enter subject" name="mainsubject" class="contacter" required>
+                        <textarea placeholder="Enter your message" name="mainmessage" class="contactermessage" required></textarea>
+                        <button class="btn Contactbtn">Send</button>
+                    </div>
+                </form>
+            </div>
+        </section>
     </main>
     <special-footer></special-footer>
 </body>

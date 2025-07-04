@@ -13,7 +13,7 @@
     <main>
         <section class="hero">
             <div class="container">
-                <span><img src="favIcon/android-chrome-512x512.png" alt="FregMeta Hero Image"></span>
+                <span><img id="anime" src="favIcon/android-chrome-512x512.png" alt="FregMeta Hero Image"></span>
             </div>
         </section>
         <section class="section_services">
@@ -42,6 +42,14 @@
                     <h1>Built Computer</h1>
                     <a href="Product.html"><input type="button" value="View All" class="btnViewAll"></a>
                 </div>
+                <dialog id="opBar">
+                    <ul class="mini-navbar" id="mini-navbar">
+                        <li><a href="Product.html">Product</a></li>
+                        <li><a href="Games.html">Games</a></li>
+                        <li><a href="Contact.html">Contact</a></li> 
+                        <li><a href="Cart.html">Cart</a></li>
+                    </ul>
+                </dialog>
                 <dialog id="productDialog">
                     <form method="dialog">
                         <div class="dialogHeader">
@@ -127,4 +135,21 @@
 </body>
 <script src="MainHeaderFooter.js"></script>
 <script src="main.js"></script> 
+<script>
+    const menuBtn = document.getElementById("menu-btn");
+    const opBar = document.getElementById('opBar');    
+    const menu = document.getElementById("mini-navbar");
+    const anime = document.getElementById("anime");
+    menuBtn.addEventListener("click", function () {
+        if (menu.style.display === "block"){
+            menu.style.display = "none";
+            opBar.close();
+            anime.style.display = "inherit";
+        } else {
+            opBar.show();
+            menu.style.display = "block";
+            anime.style.display = "none"
+        }
+    });
+</script>
 </html>

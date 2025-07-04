@@ -16,7 +16,15 @@
                 <div class="subHeader">
                     <h1>Top Games</h1>
                 </div>
-                <div class="productContainer">
+                <dialog id="opBar">
+                    <ul class="mini-navbar" id="mini-navbar">
+                        <li><a href="Product.html">Product</a></li>
+                        <li><a href="Games.html">Games</a></li>
+                        <li><a href="Contact.html">Contact</a></li> 
+                        <li><a href="Cart.html">Cart</a></li>
+                    </ul>
+                </dialog>
+                <div class="productContainer" id="productContainer">
                     <form class="gameCard">
                         <span class="img"><img src="Images/Games/Mario.jpg" alt="imgProduct"></span>
                         <input type="text" class="gameName" value="Classic Mario" readonly>
@@ -86,4 +94,21 @@
 </body>
 <script src="main.js"></script>
 <script src="MainHeaderFooter.js"></script>
+<script>
+    const menuBtn = document.getElementById("menu-btn");
+    const opBar = document.getElementById('opBar');    
+    const menu = document.getElementById("mini-navbar");
+    const grid = document.getElementById("productContainer");
+    menuBtn.addEventListener("click", function () {
+        if (menu.style.display === "block"){
+            menu.style.display = "none";
+            opBar.close();
+            grid.style.display = "grid";
+        } else {
+            opBar.show();
+            menu.style.display = "block";
+            grid.style.display = "none"
+        }
+    });
+</script>
 </html>
